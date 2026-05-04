@@ -65,12 +65,6 @@ body {
 }
 ```
 
-### Google Fonts (if available)
-
-```html
-<link href="https://fonts.google.com/specimen/Khmer+Digital" rel="stylesheet">
-```
-
 ### Download & Install
 
 1. Download the latest release from the [Releases](../../releases) page
