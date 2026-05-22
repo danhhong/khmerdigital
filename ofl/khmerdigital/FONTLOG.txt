@@ -1,0 +1,28 @@
+FONTLOG for Khmer Digital
+
+This file provides detailed information on the Khmer Digital font software.
+
+-----------------------------------------------------------
+
+2026-05-22 (Initial Release)
+
+- First official public release of Khmer Digital font family
+- Developed by Ministry of Post and Telecommunications of Cambodia (MPTC)
+- Includes 9 weights: Thin to Black
+- Full Khmer Unicode support with Latin compatibility
+- Optimized for web, mobile, and desktop environments
+- Tested within Microsoft 365 ecosystem (Word, Excel, Teams, SharePoint)
+- Includes webfont versions (WOFF2) for modern browser usage
+
+-----------------------------------------------------------
+
+Reserved Font Name:
+Khmer Digital
+
+-----------------------------------------------------------
+
+Acknowledgements:
+- Lead Designer: Danh Hong
+- Developed under MPTC digital modernization initiative
+
+-----------------------------------------------------------
