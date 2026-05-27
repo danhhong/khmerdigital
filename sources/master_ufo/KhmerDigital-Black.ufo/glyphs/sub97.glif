@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="sub97" format="2">
+  <outline>
+    <contour>
+      <point x="-538" y="-600" type="line"/>
+      <point x="-538" y="-393" type="line" smooth="yes"/>
+      <point x="-538" y="-262"/>
+      <point x="-704" y="-262" type="qcurve" smooth="yes"/>
+      <point x="-869" y="-262"/>
+      <point x="-869" y="-393" type="qcurve" smooth="yes"/>
+      <point x="-869" y="-600" type="line"/>
+      <point x="-1307" y="-600" type="line"/>
+      <point x="-1307" y="-453" type="line"/>
+      <point x="-1204" y="-453" type="line"/>
+      <point x="-1204" y="-393" type="line" smooth="yes"/>
+      <point x="-1204" y="-100"/>
+      <point x="-704" y="-100" type="qcurve" smooth="yes"/>
+      <point x="-210" y="-100"/>
+      <point x="-210" y="-393" type="qcurve" smooth="yes"/>
+      <point x="-210" y="-600" type="line"/>
+    </contour>
+  </outline>
+</glyph>

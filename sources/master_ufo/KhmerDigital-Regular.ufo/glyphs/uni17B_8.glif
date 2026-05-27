@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni17B8" format="2">
+  <unicode hex="17B8"/>
+  <outline>
+    <contour>
+      <point x="-255" y="1790" type="line"/>
+      <point x="-405" y="1790" type="line"/>
+      <point x="-405" y="2190" type="line"/>
+      <point x="-255" y="2190" type="line"/>
+    </contour>
+    <contour>
+      <point x="-386" y="1976" type="qcurve" smooth="yes"/>
+      <point x="-255" y="1860" type="line"/>
+      <point x="-255" y="1760" type="line"/>
+      <point x="-875" y="1760" type="line" smooth="yes"/>
+      <point x="-1165" y="1760"/>
+      <point x="-1165" y="1960" type="qcurve" smooth="yes"/>
+      <point x="-1165" y="2170"/>
+      <point x="-845" y="2170" type="qcurve" smooth="yes"/>
+      <point x="-605" y="2170"/>
+    </contour>
+    <contour>
+      <point x="-465" y="1890" type="line"/>
+      <point x="-604" y="2040"/>
+      <point x="-845" y="2040" type="qcurve" smooth="yes"/>
+      <point x="-995" y="2040"/>
+      <point x="-995" y="1960" type="qcurve" smooth="yes"/>
+      <point x="-995" y="1890"/>
+      <point x="-875" y="1890" type="qcurve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uF4" format="2">
+  <outline>
+    <component base="u006F"/>
+    <component base="u005E" xOffset="22" yOffset="55"/>
+  </outline>
+</glyph>

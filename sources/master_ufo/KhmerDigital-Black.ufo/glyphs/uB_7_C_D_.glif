@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uB7_CD" format="2">
+  <outline>
+    <contour>
+      <point x="-915" y="1750" type="line" smooth="yes"/>
+      <point x="-1185" y="1750"/>
+      <point x="-1185" y="1950" type="qcurve" smooth="yes"/>
+      <point x="-1185" y="2200"/>
+      <point x="-845" y="2200" type="qcurve" smooth="yes"/>
+      <point x="-565" y="2200"/>
+      <point x="-324" y="1994" type="qcurve" smooth="yes"/>
+      <point x="-215" y="1900" type="line"/>
+      <point x="-215" y="1750" type="line"/>
+    </contour>
+    <contour>
+      <point x="-535" y="1900" type="line"/>
+      <point x="-644" y="2000"/>
+      <point x="-845" y="2000" type="qcurve" smooth="yes"/>
+      <point x="-925" y="2000"/>
+      <point x="-925" y="1950" type="qcurve" smooth="yes"/>
+      <point x="-925" y="1900"/>
+      <point x="-865" y="1900" type="qcurve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="-171" y="2200" type="qcurve" smooth="yes"/>
+      <point x="-80" y="2200"/>
+      <point x="-40" y="2340" type="qcurve"/>
+      <point x="110" y="2340"/>
+      <point x="110" y="2245" type="qcurve"/>
+      <point x="60" y="2070"/>
+      <point x="-171" y="2070" type="qcurve" smooth="yes"/>
+      <point x="-224" y="2070"/>
+      <point x="-350" y="2110"/>
+      <point x="-413" y="2110" type="qcurve" smooth="yes"/>
+      <point x="-452" y="2110"/>
+      <point x="-452" y="2065" type="qcurve" smooth="yes"/>
+      <point x="-452" y="2010"/>
+      <point x="-409" y="2010" type="qcurve" smooth="yes"/>
+      <point x="-337" y="2010"/>
+      <point x="-337" y="2030" type="qcurve"/>
+      <point x="-207" y="2030" type="line"/>
+      <point x="-207" y="1890"/>
+      <point x="-424" y="1890" type="qcurve" smooth="yes"/>
+      <point x="-682" y="1890"/>
+      <point x="-682" y="2065" type="qcurve" smooth="yes"/>
+      <point x="-682" y="2250"/>
+      <point x="-413" y="2250" type="qcurve" smooth="yes"/>
+      <point x="-350" y="2250"/>
+      <point x="-224" y="2200"/>
+    </contour>
+  </outline>
+</glyph>
