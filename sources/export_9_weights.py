@@ -5,6 +5,7 @@ Compile KhmerDigital.designspace → 9 TTF weights in ttf/
 import os
 import shutil
 import subprocess
+import xml.etree.ElementTree as ET
 from fontTools.ttLib import TTFont
 
 DS_FILE    = "KhmerDigital.designspace"
@@ -29,6 +30,51 @@ INSTANCES = [
 ]
 
 OT_TABLES = ["GSUB", "GPOS", "GDEF", "gasp"]
+
+MISMATCHED_GLYPHS = [
+    "uni19E0", "uni19E1", "uni19E2", "uni19E3", "uni19E4", "uni19E5", "uni19E6", "uni19E7", "uni19E8", "uni19E9",
+    "uni19EA", "uni19EB", "uni19EC", "uni19ED", "uni19EE", "uni19EF", "uni19F1", "uni19F2", "uni19F3", "uni19F4",
+    "uni19F5", "uni19F6", "uni19F7", "uni19F9", "uni19FA", "uni19FB", "uni19FC", "uni19FD", "uni19FE", "uni19FF"
+]
+
+
+def sanitize_regular_contours():
+    """Align Regular master contour order with Thin/Black masters."""
+    glyphs_dir = os.path.join("master_ufo", "KhmerDigital-Regular.ufo", "glyphs")
+    if not os.path.isdir(glyphs_dir):
+        return
+
+    fixed = 0
+    for name in MISMATCHED_GLYPHS:
+        glif_path = os.path.join(glyphs_dir, f"{name}.glif")
+        if not os.path.exists(glif_path):
+            continue
+
+        tree = ET.parse(glif_path)
+        root = tree.getroot()
+        outline = root.find("outline")
+        if outline is None:
+            continue
+
+        contours = list(outline.findall("contour"))
+        if not contours:
+            continue
+
+        lens = [len(list(c.findall("point"))) for c in contours]
+        min_idx = lens.index(min(lens))
+
+        # Rotate contour sequence so the contour with smallest point count comes first
+        if min_idx != 0:
+            reordered = contours[min_idx:] + contours[:min_idx]
+            for c in contours:
+                outline.remove(c)
+            for c in reordered:
+                outline.append(c)
+            tree.write(glif_path, encoding="utf-8", xml_declaration=True)
+            fixed += 1
+
+    if fixed > 0:
+        print(f"Sanitized contour order for {fixed} glyphs in KhmerDigital-Regular.ufo")
 
 
 def nearest_master_file(weight: int) -> str:
@@ -63,15 +109,17 @@ def run():
         print(f"Error: '{DS_FILE}' not found. Run to_glyphs.py first.")
         return
 
+    # ── Reorder contours in Regular master to avoid IndexError ──
+    sanitize_regular_contours()
+
     print("=" * 60)
     print("      COMPILING 9 STANDALONE WEIGHTS FROM DESIGNSPACE  ")
     print("=" * 60)
 
     subprocess.run([
         "fontmake", "-m", DS_FILE, "-o", "ttf",
-        "--interpolate",
+        "-i",
         "--keep-overlaps",
-        "--no-autohint",
     ], check=True)
 
     os.makedirs(TARGET_DIR, exist_ok=True)
